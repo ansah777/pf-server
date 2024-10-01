@@ -1,0 +1,51 @@
+MongoDB:
+
+  - its a non relational ,no-sql, document based open source database management system.
+  -faster
+  -scalable
+  -document based-Json documents-data will be stored as key-value pairs
+  -schemaless(it is not based on particular structures that means like table structure in mysql).
+
+
+
+  Mysql                      MongoDB
+  ----------------------------------
+  database                   database
+  table                      collection
+  row/tuple/entity           document
+  column                     fields
+  primarykey                 _id (12bit hexadecimal value for every document which is unique)
+
+
+
+---------------------------
+->Mongoose -ODM library:
+ -object data modelling library for mongodb and node.Json
+ -used to translate objects in node app and representation of those objects in monogodb
+ -defines schema/structure for storing documents in a collection of MongoDB
+      schema Types(string,number,default,...)
+      options(required,default)
+ -creates model similar to collection where we can store documents
+ -install mongoose:npm i mongoose
+ -create connection:
+             - create folder in server:DB Folder
+             -create a js file to define connection
+
+
+  JWT(JSON Web Token):
+  -mechanism used for aunthentication
+  -need jsonwebtoken package
+  -generates a token value if the given credentials for authentication is valid,and pass it to user side
+  -every requests from user side after aunthentication will need token value with it,bcs only after verifying that token,
+  -will follow to request resolving
+  -uses sign() method for token generation
+  -uses verify() method for token verification
+
+  =>middleware
+
+  -special functions that can process requests in between client and server,and,block the request  if they needed to
+
+  const middleware=(req,res,next)=>{
+    req
+    next()
+  }
